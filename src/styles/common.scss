@@ -1,0 +1,74 @@
+// transition
+.tj-fade-enter-active{
+    transition: opacity .1s;
+}
+.tj-fade-leave-active {
+    transition: opacity .3s;
+}
+.tj-fade-enter, .tj-fade-leave-to {
+    opacity: 0;
+}
+
+.tj-slideup-enter-active, .tj-slideup-leave-active {
+    transition: .3s;
+}
+.tj-slideup-enter {
+    transform: translateY(200%);
+}
+.tj-slideup-leave-to {
+    transform: translateY(200%);
+}
+
+.tj-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 10;
+}
+
+// variable
+$text-color: #848484 !default;
+$title-color: #333 !default;
+$dark-color: #DADADA !default;
+
+$font-size-base: 14px !default;
+$font-size-small: 12px !default;
+$font-size-large: 16px !default;
+
+$line-height-base: 1.5 !default;
+
+$border-radius-base: 8px !default;
+$border-radius-small: 3px !default;
+$border-radius-large: 50px !default;
+
+// border
+@mixin tj-border-t {
+    background-image: linear-gradient(rgba($dark-color, .5), rgba($dark-color, .5));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+}
+@mixin tj-border-b {
+    background-image: linear-gradient(rgba($dark-color, .5), rgba($dark-color, .5));
+    background-size: 100% 1px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+}
+@mixin tj-border-l {
+    background-image: linear-gradient(rgba($dark-color, .5), rgba($dark-color, .5));
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+}
+@mixin tj-border-r {
+    background-image: linear-gradient(rgba($dark-color, .5), rgba($dark-color, .5));
+    background-size: 1px 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+// text
+.tj-text-center {
+    text-align: center;
+}

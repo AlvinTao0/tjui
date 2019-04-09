@@ -1,0 +1,37 @@
+@import "../styles/common.scss";
+
+.tj-dialog {
+    position: fixed;
+    z-index: 20;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: #fff;
+    border-radius: $border-radius-base;
+    .tj-dialog-title {
+        text-align: center;
+        color: $title-color;
+        font-size: $font-size-base;
+        line-height: 3em;
+    }
+    .tj-dialog-main {
+        padding: 20px 10px;
+        color: $text-color;
+        font-size: $font-size-small;
+    }
+    .tj-dialog-btnwrap {
+        display: flex;
+        @include tj-border-t;
+        .tj-dialog-btn {
+            flex: 1;
+            text-align: center;
+            color: $title-color;
+            font-size: $font-size-base;
+            line-height: 3;
+            @include tj-border-r;
+            &:last-of-type {
+                background-image: none;
+            }
+        }
+    }
+}
